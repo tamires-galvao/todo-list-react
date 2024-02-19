@@ -2,12 +2,12 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Profile/Sidebar";
 import styles from './App.module.css';
 import { useState } from "react";
-import { Input } from "./components/input";
 import { Header as ListHeader } from './components/List/Header'
 import { Button } from "./components/Button";
 import { PlusCircle } from "@phosphor-icons/react";
 import { Item } from "./components/List/Item";
 import { Empty } from "./components/List/Empty";
+import { Input } from "./components/Input";
 
 export interface ITask {
   id: number
