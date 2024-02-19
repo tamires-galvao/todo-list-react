@@ -1,0 +1,53 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content{
+  max-width: 46rem;
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.taskInfoContainer {
+  display: flex;
+  flex: 1;
+
+  justify-content: space-between;
+  gap: 0.5rem;  
+}
+
+.taskInfoContainer input, .taskInfoContainer button {
+  transform: translateY(-50%);
+
+  margin-bottom: 2.3125rem;
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tasksList > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
