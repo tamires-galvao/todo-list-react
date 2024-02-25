@@ -8,6 +8,7 @@ import { PlusCircle } from "@phosphor-icons/react";
 import { Item } from "./components/List/Item";
 import { Empty } from "./components/List/Empty";
 import { Input } from "./components/Input";
+import Swal from "sweetalert2";
 
 export interface ITask {
   id: number
@@ -43,15 +44,28 @@ export function App() {
   }
 
   function handleRemoveTask(id: number) {
-    const filteredTasks = tasks.filter((task) => task.id !== id)
-
-    if (!confirm('Deseja mesmo apagar essa tarefa?')) {
-      return
-    }
-
-    setTasks(filteredTasks)
-  }
-
+    Swal.fire({
+      title: "Deseja mesmo apagar essa tarefa?",
+      text: "Você não poderá reverter essa ação!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sim, apague a tarefa!",
+      cancelButtonText: "Não, cancele!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Apagado!",
+          text: "Sua tarefa foi removida com sucesso.",
+          icon: "success"
+        });
+        const filteredTasks = tasks.filter((task) => task.id !== id)
+        setTasks(filteredTasks)
+      }
+    });
+}
+   
   function handleToggleTask({ id, value }: { id: number; value: boolean }) {
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
@@ -68,7 +82,10 @@ export function App() {
     <div>
       <Header/>
       <div className={styles.wrapper}>
-        <Sidebar/>
+        <Sidebar
+        tasksCounter={tasks.length}
+        checkedTasksCounter={checkedTasksCounter}
+        />
         <main>
         <section className={styles.content}>
         <div className={styles.taskInfoContainer}>

@@ -1,8 +1,25 @@
+import ProgressBar from '@ramonak/react-progress-bar';
 import { Avatar } from './Avatar';
-
+import { useState, useEffect } from 'react';
 import styles from './Sidebar.module.css';
 
-export function Sidebar() {
+interface SidebarProps {
+  tasksCounter: number;
+  checkedTasksCounter: number;
+}
+
+export function Sidebar({ tasksCounter, checkedTasksCounter }: SidebarProps) {
+  const [completedPercentage, setCompletedPercentage] = useState(0);
+
+  useEffect(() => {
+    if (tasksCounter > 0) {
+      const percentage = (checkedTasksCounter / tasksCounter) * 100;
+      setCompletedPercentage(percentage);
+    } else {
+      setCompletedPercentage(0);
+    }
+  }, [tasksCounter, checkedTasksCounter]);
+
   return (
     <aside className={styles.sidebar}>
       <img
@@ -12,14 +29,17 @@ export function Sidebar() {
 
       <div className={styles.profile}>
         <Avatar src="https://github.com/tamires-galvao.png" />
-
         <strong>Tamires Galvão</strong>
       </div>
 
       <footer>
-        <a href="#">
-          Editar seu perfil
-        </a>
+        <div className={styles.title_progressbar}>
+          <p>Progresso</p>
+        </div>
+        <ProgressBar 
+        completed={completedPercentage}
+        bgColor = '#8284fa'
+        />
       </footer>
     </aside>
   );

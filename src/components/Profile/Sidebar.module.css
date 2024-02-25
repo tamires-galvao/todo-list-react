@@ -1,5 +1,5 @@
 .sidebar {
-  background: var(--gray-800);
+  background: var(--gray-500);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -60,4 +60,12 @@
 .sidebar footer a:hover {
   background: var(--green-500);
   color: var(--white);
+}
+
+.title_progressbar {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 1rem;
+  color: var(--blue);
 }
