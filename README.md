@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+<h1 align="center">
+    <img alt="Letmeask" src="https://media.discordapp.net/attachments/1192981833948860506/1211455224766660728/image.png?ex=65ee4299&is=65dbcd99&hm=d898c0b54b8dda849aa8c1c44b822df76ef897acc9dd0d2bb983ec1862240172&=&format=webp&quality=lossless&width=1686&height=790" />
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+## 🧪 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [@ramonak/react-progress-bar](https://www.npmjs.com/package/@ramonak/react-progress-bar?activeTab=readme)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Como executar
 
-- Configure the top-level `parserOptions` property like this:
+Clone o projeto e acesse a pasta do mesmo.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+$ git clone git@github.com:tamires-galvao/todo-list-react.git
+$ cd todo-list-react
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para iniciá-lo, siga os passos abaixo:
+
+```bash
+# Instalar as dependências
+$ npm -i
+
+# Iniciar o projeto
+$ npm run dev
+```
+
+## 💻 Projeto
+
+Este é um projeto simples de gerenciamento de tarefas desenvolvido em React. Ele permite que os usuários criem, removam e marquem como concluídas tarefas, além de exibir um resumo do status das tarefas na barra lateral.
+
+## 🔨 Funcionalidades Principais
+- Adicionar uma nova tarefa.
+- Remover uma tarefa existente.
+- Marcar uma tarefa como concluída.
+- Visualizar o número total de tarefas criadas.
+- Visualizar o número de tarefas concluídas.
+
+## 🔖 Layout
+
+ Esse projeto contém pequenas alteraçōes do layout original. Você pode visualizar o layout original do projeto através do link abaixo:
+
+- [Layout Web](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate)
+
+Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
+
+---
+
+Feito com 💜 by Tamires Galvão 👋🏻
