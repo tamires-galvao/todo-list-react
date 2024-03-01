@@ -26,7 +26,7 @@ Para iniciá-lo, siga os passos abaixo:
 
 ```bash
 # Instalar as dependências
-$ npm -i
+$ npm i
 
 # Iniciar o projeto
 $ npm run dev
