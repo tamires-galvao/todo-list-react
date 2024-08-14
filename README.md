@@ -1,9 +1,3 @@
-<h1 align="center">
-    <img alt="Letmeask" src="https://media.discordapp.net/attachments/1192981833948860506/1211455224766660728/image.png?ex=65ee4299&is=65dbcd99&hm=d898c0b54b8dda849aa8c1c44b822df76ef897acc9dd0d2bb983ec1862240172&=&format=webp&quality=lossless&width=1686&height=790" />
-</h1>
-
-<br>
-
 ## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
